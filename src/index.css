@@ -21,11 +21,8 @@
 
 body{
   font-family: Orbitron, sans-serif;
-  /* border: 1px solid yellow; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
   background-color: #f2f2f2;
   color: #7f7f7f;
@@ -36,29 +33,21 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid red; */
   width: 100%;
-  width: 500px;
+  max-width: 550px;
   height: 100vh;
+  margin: auto;
 }
 
 .Header{
-  margin-bottom: auto;
-  margin-right: auto;
-  margin-left:auto;
-  /* border: 1px solid rgb(68, 0, 255); */
   width: 100%;
-  max-width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2px;
+  padding: 0 0.25em;
 }
 
 .MainContent{
-  margin-right: auto;
-  margin-left:auto;
-  /* border: 1px solid rgb(43, 255, 0); */
   flex-grow: 1;
   width: 100%;
   display: flex;
@@ -90,13 +79,9 @@ body{
 }
 
 .Footer{
-  margin-top: auto;
-  margin-right: auto;
-  margin-left:auto;
-  /* border: 1px solid rgb(255, 0, 221); */
   width: 100%;
-  max-width: 500px;
-  text-align: center;
-  padding: 2px;
+  padding: 0.25em;
+  display: grid;
+  place-content: center;
 }
 
