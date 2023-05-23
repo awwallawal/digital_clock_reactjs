@@ -3,12 +3,13 @@ import Greeting from './Greeting'
 import LocalTime from './LocalTime'
 import GMTTime from './GMTTime'
 
-function MainContent({ location, greeting, localtime, gmtTime }) {
+function MainContent({ greeting, localtime, gmtTime }) {
+
+  
 
   return (
     <div className='MainContent'>
      <Greeting 
-      location={location}
       greeting={greeting}
      />
 

@@ -1,15 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function LocalTime({ localtime }) {
+function LocalTime() {
+  
+  const checkTime = () => {
+    let checkTime = new Date().toLocaleTimeString();
+    return checkTime;
+  }
+
+  const [localTime, setLocalTime] = useState(checkTime())
+
+  const handleLocalTime = () => {
+    setLocalTime (checkTime())
+  }
+
+  setInterval(handleLocalTime, 1000)
+
+
+
   return (
     <div className='localTime'>
-      <p> {localtime} </p>
+      <p> {localTime} </p>
     </div>
   )
 }
 
 LocalTime.defaultProps = {
- localtime: 'LocalTime'
+ localTime: 'LocalTime'
 }
 
 export default LocalTime

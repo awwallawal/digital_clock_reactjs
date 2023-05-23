@@ -1,9 +1,10 @@
 import React from 'react'
 
 function Greeting({ greeting }) {
+
   return (
     <div className='greeting'>
-      <p> Good {greeting} Guest! </p>
+      <p> Good {greeting} Guest ! </p>
     </div>
   )
 }

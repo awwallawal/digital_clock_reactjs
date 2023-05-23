@@ -13,41 +13,21 @@ import Night from '../src/images/icons8-night.gif'
 
 function App() {
 
-  const checkTime = () =>{
-    let currentTimeCheck = new Date().toLocaleTimeString();
-    return currentTimeCheck
-  }
 
-  const checkGMT = () =>{
-    let currentGMTCheck = new Date().toDateString();
-    return currentGMTCheck
-  }
 
-  const [currentTime, setCurrentTime] = useState(checkTime());
-  const [currentGMT, setCurrentGMT] = useState(checkGMT());
-
-  const handleSetCurrentTime = () => {
-    setCurrentTime(checkTime())
-  }
-
-  const handleSetCurrentGMT = () => {
-    setCurrentGMT(checkGMT())
-  }
-
-  setInterval(handleSetCurrentTime, 1000);
-  setInterval(handleSetCurrentGMT, 1000);
-
+  
+  
   const greeting = () => {
     let localHour = new Date().getHours();
     let message = "";
 
-    if(localHour > 0 && localHour < 12){
+    if(localHour >= 0 && localHour < 12){
       message = `Morning 🌄`
-    } else if(localHour > 12 && localHour < 16){
+    } else if(localHour >= 12 && localHour < 16){
       message = `Afternoon ☀️`
-    } else if(localHour > 16 && localHour < 20){
+    } else if(localHour >= 16 && localHour < 20){
       message = "Evening 🌇"
-    }  else if(localHour > 20 && localHour < 23){
+    }  else if(localHour >= 20 && localHour < 23){
       message = "Night 🌃"
     }
 
@@ -66,7 +46,7 @@ function App() {
       />
 
       <MainContent
-        greeting={greeting()} 
+        greeting={greeting()}
       />
 
       <Footer 
