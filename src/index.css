@@ -1,0 +1,86 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Orbitron;
+  src: url(./Font/Orbitron-Black.ttf);
+  src: url(./Font/Orbitron-Bold.ttf);
+  src: url(./Font/Orbitron-ExtraBold.ttf);
+  src: url(./Font/Orbitron-Medium.ttf);
+  src: url(./Font/Orbitron-Regular.ttf);
+  src: url(./Font/Orbitron-SemiBold.ttf);
+}
+
+body{
+  font-family: Orbitron, sans-serif;
+  border: 1px solid yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  width: 100%;
+  width: 500px;
+  height: 100vh;
+}
+
+.Header{
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left:auto;
+  border: 1px solid rgb(68, 0, 255);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MainContent{
+  margin-right: auto;
+  margin-left:auto;
+  border: 1px solid rgb(43, 255, 0);
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+}
+
+.localTime{
+  font-size: 81px;
+  border: 1px solid red;
+}
+
+.greeting{
+  border: 1px solid orange;
+}
+
+.gmtTime{
+  border: 1px solid orange;
+  margin: 0 0 0 auto;
+}
+
+.Footer{
+  margin-top: auto;
+  margin-right: auto;
+  margin-left:auto;
+  border: 1px solid rgb(255, 0, 221);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
