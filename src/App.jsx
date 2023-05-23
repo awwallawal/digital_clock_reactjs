@@ -20,22 +20,23 @@ function App() {
   const greeting = () => {
     let localHour = new Date().getHours();
     let message = "";
+    let cup = "TY"
 
     if(localHour >= 0 && localHour < 12){
       message = `Morning 🌄`
     } else if(localHour >= 12 && localHour < 16){
       message = `Afternoon ☀️`
     } else if(localHour >= 16 && localHour < 20){
-      message = "Evening 🌇"
+      message = `Evening 🌇`
     }  else if(localHour >= 20 && localHour < 23){
-      message = "Night 🌃"
+      message = `Night 🌃`
     }
 
     return message
   }
 
-
-  const title = "Digital Clock"
+  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const title = "Digital Clock";
   const developer = "Awwal";
   const year = new Date().getFullYear();
   return (
@@ -47,6 +48,7 @@ function App() {
 
       <MainContent
         greeting={greeting()}
+        timezone={timezone}
       />
 
       <Footer 

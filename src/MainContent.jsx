@@ -3,7 +3,7 @@ import Greeting from './Greeting'
 import LocalTime from './LocalTime'
 import GMTTime from './GMTTime'
 
-function MainContent({ greeting, localtime, gmtTime }) {
+function MainContent({ greeting, localtime, gmtTime, timezone }) {
 
   
 
@@ -11,6 +11,7 @@ function MainContent({ greeting, localtime, gmtTime }) {
     <div className='MainContent'>
      <Greeting 
       greeting={greeting}
+      timezone={timezone}
      />
 
 
